@@ -7,7 +7,7 @@ export default function define(runtime, observer) {
   const fileAttachments = new Map([["poi.tsv",new URL("./files/poi_scaledsig.tsv",import.meta.url)],["topoJSON-Ireland.json",new URL("./files/topoJSON-Ireland.json",import.meta.url)]]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], function(md){return(
-md`### Estimated Accommodation Suppply Level at Fáilte Ireland Points of Interest`
+md`### Fáilte Ireland Points of Interest - Estimated Accommodation Suppply Level`
 )});
   main.variable(observer("viewof min_popularity")).define("viewof min_popularity", ["Scrubber"], function(Scrubber){return(
 Scrubber([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], {autoplay: false, loop: false})
